@@ -1,7 +1,7 @@
 package io.vdubovsky.licensemanagement.rest.controller;
 
 import io.vdubovsky.licensemanagement.dto.OutputDto;
-import io.vdubovsky.licensemanagement.rest.input.InputProcessor;
+import io.vdubovsky.licensemanagement.service.input.InputProcessor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
