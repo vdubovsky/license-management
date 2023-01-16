@@ -1,5 +1,6 @@
 package io.vdubovsky.licensemanagement.service.input;
 
+import io.vdubovsky.licensemanagement.annotation.LicensedAccess;
 import io.vdubovsky.licensemanagement.dto.OutputDto;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -18,6 +19,7 @@ public class InputProcessorImpl implements InputProcessor {
     private final ExecutorService inputProcessorExecutorService;
 
     @Override
+    @LicensedAccess
     public DeferredResult<OutputDto> processInput() {
         DeferredResult<OutputDto> result = new DeferredResult<>();
         inputProcessorExecutorService.submit(() -> doProcessInput(result));
